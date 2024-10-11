@@ -2,118 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .box1 {
-        width: 100%;
-        height: 400px;
-        background: rgb(60, 226, 31);
-        transition: all 1s;
-      }
-      .box2 {
-        width: 100%;
-        height: 400px;
-        background-color: rgb(248, 45, 45);
-        transition: all 1s;
-      }
-      .box3 {
-        width: 100%;
-        height: 500px;
-        background-color: rgb(21, 197, 220);
-        transition: all 1s;
-      }
-      .active {
-        background-color: cornflowerblue !important;
-      }
-      ul {
-        position: absolute;
-        top: 0;
-        left: 50%;
-      }
-      li {
-        width: 40px;
-        height: 40px;
-        background-color: peru;
-      }
-      ul > .liactive {
-        background-color: aliceblue;
-      }
-    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/ffmpeg.js@2.8.5/ffmpeg.min.js"></script>
+    <title>XIAO XIN TE$T ¯L X M</title>
+    <script type="module" crossorigin src="/assets/index-caf1c649.js"></script>
+    <link rel="stylesheet" href="/assets/index-d7820abd.css">
   </head>
   <body>
-    <div class="box box1">1111111</div>
-    <div class="box box2">2222222</div>
-    <div class="box box3">3333333</div>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <div id="app"></div>
+    
   </body>
-  <script>
-    // const box1 = document.querySelector(".box1");
-    // IntersectionObserver.observe(box1);
-    let abox = true;
-    let bbox = false;
-    let cbox = false;
-    // Register IntersectionObserver
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log(entries);
-        console.log("1", entry.boundingClientRect);
-        console.log("2", entry.intersectionRatio);
-        console.log("3", entry.intersectionRect);
-        console.log("4", entry.isIntersecting);
-        console.log("5", entry.rootBounds);
-        console.log("6", entry.target);
-        console.log("7", entry.time);
-        // Add 'active' class if observation target is inside viewport
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-        // Remove 'active' class otherwise
-        else {
-          entry.target.classList.remove("active");
-        }
-      });
-      // console.log(entries.length);
-      // for (let i = 0; i < entries.length; i++) {
-      //   const element = entries[i];
-      //   console.log(element.isIntersecting);
-      //   // if (element.isIntersecting) {
-      //   //   console.log(element.isIntersecting);
-      //   //   element.target.classList.add("active");
-      //   //   return;
-      //   // }
-      // }
-    });
-
-    // Declares what to observe, and observes its properties.
-    const boxElList = document.querySelectorAll(".box");
-
-    boxElList.forEach((el) => {
-      io.observe(el);
-    });
-
-    // let arr1 = ["12", "34", "56"];
-    // if (arr1.findIndex((perItem) => perItem == "12") == -1) {
-    //   arr1.push("public");
-    // }
-    // console.log(arr1);
-    // const test = () => {
-    //   return new Promise((res) => {
-    //     console.log(1111111);
-    //     res("sss");
-    //   });
-    // };
-    // test()
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((res) => {
-    //     console.log(1111123123);
-    //   });
-  </script>
 </html>
